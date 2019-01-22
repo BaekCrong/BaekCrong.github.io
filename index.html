@@ -3,16 +3,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--
+  시작에 앞서 나만의 CV를 만들면서 좀 더 정형화되고 보기편한 템플릿이 필요했다.
+  때문에 아래의 검색을 하다가 찾게된 아래의 링크중에 하나를 참고하게 되었다.
+  Ref1. https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap4-resume-cv-template-for-developers-pillar/
+  Ref2. http://syua.co.kr/profile/
+  Ref3. https://themeforest.net/item/ryancv-vcard-resume-wordpress-theme/22890097?irgwc=1&clickid=SVIxe0xfmxyJRJ%3A0OGSitWCIUkgQKfyOKVRaQE0&iradid=275988&irpid=493214&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_493214&utm_medium=affiliate&utm_source=impact_radius
+  -->
     <title>CrongBaek's CV</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
+
+    <meta name="description" content="BaekCrong Resume Template">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
     <link rel="shortcut icon" href="favicon.ico">
-    
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
@@ -21,6 +29,23 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+
+
+    <!--Ref4. seorobin.github.io/ ------------------------------------------------------------------------------------------------------------------------>
+    <link rel="canonical" href="https://baekcrong.github.io/"> <!--중복 URL 통합 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><!-- 교차소스에 관계없이 유효하지않은 SRI가 차단된다:: Chrome 개발자도구 -->
+    <meta property="og:image" content="https://baekcrong.github.io/images/kakaourl.jpg"/><!--사용자의 링크를 공유할때 표시되는 이미지의 URL-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 위의 코드를 이렇게도 쓸 수 있다. Jquery CDN코드로, 스타일링개선할때 사용한다-->
+    <script>
+      if (navigator.userAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || navigator.userAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+        alert('모바일로 접속하신 것 같아요. 이 페이지는 가로 보기로 보시는 것을 추천합니다 :)');
+      }else {
+
+      }
+    </script>
+    <!--Ref4. seorobin.github.io/ ------------------------------------------------------------------------------------------------------------------------>
 </head>
 
 <body>
@@ -195,7 +220,7 @@
 								    <article class="resume-timeline-item position-relative pb-5">
 									    <div class="resume-timeline-item-header mb-2">
 										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">H/W제품 보조개발자<small class="text-muted">(정규직)</small></h3>
+										        <h3 class="resume-position-title font-weight-bold mb-1"><a href="assets/images/bltech.png">H/W제품 보조개발자</a><small class="text-muted">(정규직)</small></h3>
 										        <div class="resume-company-name ml-auto">(주)비엘테크</div>
 										    </div><!--//row-->
 										    <div class="resume-position-time">2016.08 - 2017.08</div>
