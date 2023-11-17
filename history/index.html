@@ -167,7 +167,11 @@
 	}
   </style>
   <script>
-  	//DOMContentLoaded부분은 추후 onClick Function으로 대체 필요
+    /**
+     * 구분: 공통
+     * 내용: 주요 컴포넌트 이벤트
+	 * 특이사항: DOMContentLoaded부분은 추후 onClick Function으로 대체 필요
+     */
 	document.addEventListener('DOMContentLoaded', function () {
 		var menuIcon = document.getElementById('menuIcon');
 		var menuBar = document.getElementById('menuBar');
@@ -197,14 +201,10 @@
 		};
 	});
 
-
-
-	document.addEventListener('mousemove', function (event) {
-	    if(event.toElement.href == undefined
-	        && event.toElement.id != "menuBar"){
-	        menuBar.style.display = "none";
-	    }
-	});
+    /**
+     * 구분: 공통
+     * 내용: 클릭 이벤트 효과
+     */
 	document.addEventListener('click', function (event) {
 	    var x = event.clientX;
 	    var y = event.clientY;
@@ -235,6 +235,23 @@
 	        effectS.remove();
 	    });
 	});
+
+    /**
+     * 구분: MOBILE
+     * 내용: 모바일 메뉴 포커스아웃시 숨김처리
+     */
+	document.addEventListener('mousemove', function (event) {
+		var menuBar = document.getElementById('menuBar');
+	    if(event.toElement.href == undefined
+	        && event.toElement.id != "menuBar"){
+	        menuBar.style.display = "none";
+	    }
+	});
+
+    /**
+     * 구분: Mobile
+     * 내용: 하단 위로가기 버튼
+     */
 	async function upToPage(){
 		var content1 = document.getElementById("content1");
 		content1.scrollIntoView({ behavior: 'smooth' });
@@ -242,17 +259,44 @@
 			location.href="#";
 		},100);
 	}
+
+    /**
+     * 구분: WEB
+     * 내용: F12 클릭 방지
+     */
+	document.addEventListener('keydown', function (event) {
+		if ( event.keyCode == 123) {
+	    	event.preventDefault();
+	        event.returnValue = false;
+		}
+	});
+    /**
+     * 구분: WEB
+     * 내용: 우클릭 방지
+     */
+    document.onmousedown=disableclick;
+    function disableclick(event){
+        if (event.button==2) {
+            return false;
+        }
+    }
+
 </script>
 </head>
-<body>
-    <ul class="menuBar" id="menuBar">
+<!--
+oncontextmenu='return false': 우클릭 방지
+onselectstart='return false': 블록선택 방지
+ondragstart='return false': 드래그 방지
+-->
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+	<ul class="menuBar" id="menuBar">
         <li class="indexArea mIndexArea"><a href="#" class="content1"> javachat </a></li>
         <li class="indexArea mIndexArea"><a href="#" class="content2"> YoloBook </a></li>
         <li class="indexArea mIndexArea"><a href="#" class="content3"> GifProject </a></li>
     </ul>
     <div class="frame1" id="frame1">
         <div class="menuIcon" id="menuIcon">☰</div>
-        <h1 class="title1"> Git History </h1>
+        <h1 class="title1"> SVN History </h1>
         <div class="frame2">
             <span class="upToDate"> up to date : 2023.11.15 </span>
         </div>
