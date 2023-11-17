@@ -47,7 +47,6 @@
 		font-weight:bold;
 	}
 	.indexArea{
-		height: 25px;
 		margin-bottom: 5px; /* 각 요소 사이에 간격 추가 */
 		font-size:15px;
 		cursor: pointer;
@@ -55,6 +54,7 @@
 		flex:auto;
 	}
 	.mIndexArea{
+        height: 25px;
 		text-align: center;
 		background-color:#176f5526;
 		padding:20px;
@@ -63,6 +63,7 @@
 
 	}
 	.wIndexArea{
+        height: 50px;
 		margin:10px 0px 0px 10px;
 		text-align:left;
 	}
@@ -153,6 +154,11 @@
 	    border-radius: 70%;
 	    transition: transform 0.5s ease;
 	}
+    .hyperLink {
+        font-size: small;
+        color:blue;
+        text-decoration:underline;
+    }
 	@media(max-width: 500px) {
 		.menuIcon{
 		  display: block;
@@ -290,9 +296,8 @@ ondragstart='return false': 드래그 방지
 -->
 <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 	<ul class="menuBar" id="menuBar">
-        <li class="indexArea mIndexArea"><a href="#" class="content1"> javachat </a></li>
-        <li class="indexArea mIndexArea"><a href="#" class="content2"> YoloBook </a></li>
-        <li class="indexArea mIndexArea"><a href="#" class="content3"> GifProject </a></li>
+        <li class="indexArea mIndexArea"><a href="#" class="content1"> YoloBook </a></li>
+        <li class="indexArea mIndexArea"><a href="#" class="content2"> GifProject </a></li>
     </ul>
     <div class="frame1" id="frame1">
         <div class="menuIcon" id="menuIcon">☰</div>
@@ -302,21 +307,18 @@ ondragstart='return false': 드래그 방지
         </div>
         <div class="frame3">
             <div class="frame4">
-              <h2>카테고리</h2>
-              <div class="indexArea wIndexArea"><a href="#" class="content1">1. javachat</a></div>
-              <div class="indexArea wIndexArea"><a href="#" class="content2">2. YoloBook</a></div>
-              <div class="indexArea wIndexArea"><a href="#" class="content3">3. GifProject</a></div>
+                <h2>카테고리</h2>
+                <div class="indexArea wIndexArea"><a href="#" class="content1"> YoloBook</a></div>
+                <div class="indexArea wIndexArea"><a href="#" class="content2"> GifProject</a></div>
             </div>
             <div class="frame5">
                 <div class="contentArea" id="content1">
-                  <h3 href="https://github.com/WOOBINCHO/javachat">javachat 바로가기</h3>
-            	</div>
+                    <h3 href="https://github.com/baekjinwoo/YoloBook">YoloBook <span class="hyperLink">바로가기</span></h3>
+                </div>
                 <div class="contentArea" id="content2">
-                  <h3 href="https://github.com/baekjinwoo/YoloBook">YoloBook 바로가기</h3>
-            	</div>
-                <div class="contentArea" id="content3">
-                  <h3 href="https://github.com/ckc753/GifProject">GifProject 바로가기</h3>
-            	</div>
+                    <h3 href="https://github.com/ckc753/GifProject">GifProject <span class="hyperLink">바로가기</span></h3>
+                </div>
+            </div>
         </div>
     </div>
     <div class="upToPage" onClick="upToPage()"> ↑ </div>
