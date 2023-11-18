@@ -8,8 +8,6 @@
 	body {
 	  margin: 0; /* 페이지의 기본 마진 제거 */
 	  font-family: 'BalooThambi', sans-serif;
-	  width:100%;
-	  height:100%;
 	}
 	.frame1 {
 		width: 90%;
@@ -18,8 +16,8 @@
 		background-color: #ffffff;
 		padding: 20px;
 	}
-	.frame2 {
-		text-align:end;
+	.fRight {
+		float:right;
 	}
 	.frame3 {
 		display: flex;
@@ -94,6 +92,9 @@
 		background-color:#176f5526;
 		padding:15px;
 		cursor: pointer;
+	}
+	pre {
+		font-size: 12px;
 	}
 	.contentArea {
 		height: auto; /* 내용에 따라 높이 지정 */
@@ -300,26 +301,81 @@ ondragstart='return false': 드래그 방지
 <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 	<ul class="menuBar" id="menuBar">
         <li class="indexArea mIndexArea"><a href="#" class="content1"> YoloBook </a></li>
-        <li class="indexArea mIndexArea"><a href="#" class="content2"> GifProject </a></li>
+        <li class="indexArea mIndexArea"><a href="#" class="content2"> 움짤마켓 </a></li>
     </ul>
     <div class="frame1" id="frame1">
         <div class="menuIcon" id="menuIcon">☰</div>
-        <h1 class="title1"> Git History </h1>
-        <div class="frame2">
-            <span class="upToDate"> up to date : 2023.11.15 </span>
+        <h1 class="title1"> My Git History </h1>
+        <div class="upToDate">
+            <span> ※ 특이사항: SVN기반 내역들은 별도의 링크가 없어서 제외했습니다 </span>
+            <span  class="fRight"> up to date : 2023.11.18 </span>
         </div>
         <div class="frame3">
             <div class="frame4">
                 <h2>카테고리</h2>
                 <div class="indexArea wIndexArea"><a href="#" class="content1"> YoloBook</a></div>
-                <div class="indexArea wIndexArea"><a href="#" class="content2"> GifProject</a></div>
+                <div class="indexArea wIndexArea"><a href="#" class="content2"> 움짤마켓</a></div>
             </div>
             <div class="frame5">
                 <div class="contentArea" id="content1">
                     <h3 href="https://github.com/baekjinwoo/YoloBook">YoloBook <span class="hyperLink">바로가기</span></h3>
+                    <pre><b>공방 예약 및 관리하는 시스템</b> 주요 담당 내용
+
+
+<b>[개발 정의]</b>
+컨셉 정의, 메뉴 구성도
+
+
+<b style="color:green">[회원 관리]</b>
+강사/일반회원에 따른 회원가입 개발
+단, 강사는 자격증 필수 첨부
+
+
+<b style="color:green">[카테고리,상세]</b>
+카테고리별 등록된 공방 목록을 표시
+그리고 클릭시 공방 상세 화면 호출
+
+
+<b style="color:green">[관리자 화면]</b>
+관리자 화면을 따로 관리
+데이터 강제 변경/삭제/공방등록/강사인증
+					</pre>
                 </div>
                 <div class="contentArea" id="content2">
-                    <h3 href="https://github.com/ckc753/GifProject">GifProject <span class="hyperLink">바로가기</span></h3>
+                    <h3 href="https://github.com/ckc753/GifProject">움짤마켓 <span class="hyperLink">바로가기</span></h3>
+                    <pre><b>움짤 저장 및 관리 앱</b> 주요 담당 내용
+
+
+<b>[개발 정의]</b>
+컨셉 정의, 메뉴 구성도 및 주요 디자인
+
+
+<b style="color:green">[스플래스 화면]</b>
+스플래스 화면 추가
+
+
+<b style="color:green">[회원 관리]</b>
+FireBase연계 일반 회원가입, 일반로그인, SNS계정로그인
+그리고 회원만 이용할 수 있도록 Validate
+
+
+<b style="color:green">[카테고리,상세]</b>
+카테고리 별 메뉴 이동 화면 구성
+Gif로딩에 속도향상을 위해 Recycler기반 모듈
+
+
+<b style="color:green">[파일 업/다운로드]</b>
+FireBase연계 휴대폰 이미지 업로드 및 저장
+다운로드 저장 권한 체크 로직
+
+
+<b style="color:green">[관리자 화면]</b>
+관리자모드 분기처리, 수정기능
+
+
+<b>[배포 및 향후]</b>
+앱 배포, 세부내용 정리 및 광고/홍보 계정 관리
+					</pre>
                 </div>
             </div>
         </div>
