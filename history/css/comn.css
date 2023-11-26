@@ -1,0 +1,70 @@
+	/**
+	 * [컴포넌트 커스텀 스타일]
+	 * body: 전체 영역
+	 * a: 메뉴 하이퍼링크
+	 * h2, h3: 카테고리와 바로가기 타이틀
+	 * pre: 우측 설명 글
+	 */
+	body { margin: 0; /* 페이지의 기본 마진 제거 */ font-family: 'BalooThambi', sans-serif; }
+	a:link { text-decoration:none; }
+	a:visited { text-decoration:none; }
+	a:hover { color:#000000;font-weight:bold;text-decoration:none; }
+	a:active { color:#ffffff;font-weight:bold;text-decoration:none;	}
+	h2 { text-align:center;	color:#026145; background-color:#176f5526; padding:15px; }
+	h3 { text-align:left; color:#026145; background-color:#176f5526; padding:15px; cursor: pointer;	}
+	pre { font-size: 12px; }
+
+
+
+	/* [클래스 선택자 지정 스타일-1]
+	 * .frame1: body영역 내 전체 영역
+	 * .title1: 상단 제목
+	 * .upToDate: 날짜 및 특이사항 폰트 스타일
+	 */
+	.frame1 { width: 90%; max-width: 1130px; /* 최대 폭 제한 */ margin: 20px auto; /* 중앙 정렬 */ background-color: #ffffff; padding: 20px; }
+	.title1 { font-size: 2.5rem; text-align: center; color: #7ec4ae; font-weight:bold; font-family: math; }
+	.upToDate { font-size: 0.8rem; color: #372d2d; font-weight:bold; }
+
+	/* [클래스 선택자 지정 스타일-2]
+	 * .frame3: 상단 제목 밑의 frame4 / frame5를 표시할 영역
+	 * .frame4: 웹 상에서 좌측 카테고리 메뉴 영역
+	 * .indexArea: 카테고리 메뉴 바
+	 * .mIndexArea: 카테고리 메뉴 바 (모바일 추가 스타일)
+	 * .wIndexArea: 카테고리 메뉴 바 (웹 추가 스타일)
+	 */
+	.frame3 { display: flex; padding-top:10px; gap: 15px; /* 좌우 간격을 좀 주기 위해 수정 */ }
+	.frame4 { display: flow; width:25%; background-color:#176f5526; }
+	.frame5 { width: 100%; height:100%; /*height: 700px;*/ overflow: overlay; }
+	.indexArea{ margin-bottom: 5px; /* 각 요소 사이에 간격 추가 */ font-size:15px; cursor: pointer; margin:auto auto; flex:auto;	}
+	.mIndexArea{ height: 25px; text-align: center; background-color:#176f5526; padding:20px; border-radius:10px; font-size:larger; }
+	.wIndexArea{ height: 50px; margin:10px 0px 0px 10px; text-align:left; }	
+
+	/* [클래스 선택자 지정 스타일-3]
+	 * .frame5: 웹 상의 우측 설명 영역 / 모바일 상의 설명 영역
+	 * .contentArea: frame5에 표시되는 실제 설명 영역
+	 * .effectL: 클릭시 이펙트 효과 
+	 * .effectS: 클릭시 이펙트 효과 
+	 * .hyperLink: 카테고리명 하이퍼링크
+	 */
+	.contentArea { height: auto;/* 내용에 따라 높이 지정 */ border-radius: 5px;/* 경계선을 둥글게 만듬 */ margin-bottom: 10px;/* 각 요소 사이에 간격 추가 */ background-color: #176f5526;	 font-size:15px; padding:5px; }
+	.effectL { position: absolute; width: 40px; height: 40px; border: 1px solid #07ad79; border-radius: 70%; transition: transform 0.5s ease; }
+	.effectS { position: absolute; width: 20px; height: 20px; background-color:#07ad79; border-radius: 70%; transition: transform 0.5s ease; }
+    .hyperLink { font-size: small; color:blue; text-decoration:underline; }
+
+    
+
+	/**
+	 * [모바일 화면]
+	 * .menuIcon: 좌측상단 메뉴아이콘 표시/미표시
+	 * .frame4: 좌측 웹 메뉴카테고리 표시/미표시
+	 * .upToPage: 우측하단 위로버튼 표시/미표시
+	 */
+	.menuIcon{ top:0px; position:fixed; display: none; background-color:#ffffff; width:100%; }
+	.menuBar{ position:fixed; background-color:#def5ee; width:-webkit-fill-available; height:80px; display:none; overflow:overlay; gap:30px; list-style:none; /*margin-left:-45px;list-style을 숨긴만큼 앞당기기*/ padding-right:40px; top:-15px; z-index:10;	}
+	.upToPage{ width: 55px; height: 55px; line-height:45px; font-size:40px; font-weight:bold; border-radius: 70%; position: fixed; top:90%; left:75%; text-align:center; color:#07ad79; border:1px solid #07ad79; background-color:#ffffff; cursor: pointer; display:none; }
+	@media(max-width: 500px) { 
+		.menuIcon{ display: block;   font-size:35px; }
+		.frame4 { display: none; }
+		.upToPage{ display: block; }
+	}
+
